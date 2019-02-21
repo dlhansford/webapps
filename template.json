@@ -229,7 +229,7 @@
             "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01'.",
             "type": "Microsoft.Web/serverfarms",
             "sku": {
-                "name": "F1",
+                "name": "F1",   
                 "tier": "Free",
                 "size": "F1",
                 "family": "F",
