@@ -3,88 +3,116 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "sites_dhb2cdemo_name": {
-            "value": null
+            "defaultValue": "dhb2cdemo2",
+            "type": "String"
         },
         "sites_ForDinner_name": {
-            "value": null
+            "defaultValue": "ForDinner2",
+            "type": "String"
         },
         "sites_hansfordssite_name": {
-            "value": null
+            "defaultValue": "hansfordssite2",
+            "type": "String"
         },
         "sites_DHAzureToolkit_name": {
-            "value": null
+            "defaultValue": "DHAzureToolkit2",
+            "type": "String"
         },
         "sites_WingtipB2CDemos_name": {
-            "value": null
+            "defaultValue": "WingtipB2CDemos2",
+            "type": "String"
         },
         "serverfarms_sandboxasp01_name": {
-            "value": null
+            "defaultValue": "sandboxasp012",
+            "type": "String"
         },
         "components_dhb2cdemo_name": {
-            "value": null
+            "defaultValue": "dhb2cdemo2",
+            "type": "String"
         },
         "config_web_name": {
-            "value": null
+            "defaultValue": "web2",
+            "type": "String"
         },
         "config_web_name_1": {
-            "value": null
+            "defaultValue": "web2",
+            "type": "String"
         },
         "components_msfsusb2cdemo_name": {
-            "value": null
+            "defaultValue": "msfsusb2cdemo2",
+            "type": "String"
         },
         "components_hansfordssite_name": {
-            "value": null
+            "defaultValue": "hansfordssite2",
+            "type": "String"
         },
         "serverfarms_WingTipBillingPlan_name": {
-            "value": null
+            "defaultValue": "WingTipBillingPlan2",
+            "type": "String"
         },
         "config_web_name_2": {
-            "value": null
+            "defaultValue": "web2",
+            "type": "String"
         },
         "config_web_name_3": {
-            "value": null
+            "defaultValue": "web2",
+            "type": "String"
         },
         "components_hansford_toolkit_name": {
-            "value": null
+            "defaultValue": "hansford-toolkit2",
+            "type": "String"
         },
         "config_web_name_4": {
-            "value": null
+            "defaultValue": "web2",
+            "type": "String"
         },
         "accounts_fsussearch_name": {
-            "value": null
+            "defaultValue": "fsussearch2",
+            "type": "String"
         },
         "accounts_ImageDetection_name": {
-            "value": null
+            "defaultValue": "ImageDetection2",
+            "type": "String"
         },
         "hostNameBindings_dhb2cdemo.azurewebsites.net_name": {
-            "value": null
+            "defaultValue": "dhb2cdemo2.azurewebsites.net",
+            "type": "String"
         },
         "hostNameBindings_fordinner.azurewebsites.net_name": {
-            "value": null
+            "defaultValue": "fordinner2.azurewebsites.net",
+            "type": "String"
         },
         "deployments_9ee22fdf69ae128a2893ed317807cbf49eb124ac_name": {
-            "value": null
+            "defaultValue": "9ee22fdf69ae128a2893ed317807cbf49eb124ac",
+            "type": "String"
         },
         "deployments_480034ddbc2298e4da3be5ec252a5e319aa3c6c7_name": {
-            "value": null
+            "defaultValue": "480034ddbc2298e4da3be5ec252a5e319aa3c6c7",
+            "type": "String"
         },
         "hostNameBindings_hansfordssite.azurewebsites.net_name": {
-            "value": null
+            "defaultValue": "hansfordssite.azurewebsites.net",
+            "type": "String"
         },
         "hostNameBindings_dhazuretoolkit.azurewebsites.net_name": {
-            "value": null
+            "defaultValue": "dhazuretoolkit.azurewebsites.net",
+            "type": "String"
         },
         "hostNameBindings_wingtipb2cdemos.azurewebsites.net_name": {
-            "value": null
+            "defaultValue": "wingtipb2cdemos.azurewebsites.net",
+            "type": "String"
         },
         "deployments_b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2_name": {
-            "value": null
+            "defaultValue": "b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2",
+            "type": "String"
         },
         "deployments_9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3_name": {
-            "value": null
+            "defaultValue": "9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3",
+            "type": "String"
         },
         "deployments_9a0aa48390fb1063b87ffe4babe52a08f08e41ce_name": {
-            "value": null
+            "defaultValue": "9a0aa48390fb1063b87ffe4babe52a08f08e41ce",
+            "type": "String"
         }
     }
 }
