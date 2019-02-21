@@ -1,0 +1,1350 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_dhb2cdemo_name": {
+            "defaultValue": "dhb2cdemo",
+            "type": "String"
+        },
+        "sites_ForDinner_name": {
+            "defaultValue": "ForDinner",
+            "type": "String"
+        },
+        "sites_hansfordssite_name": {
+            "defaultValue": "hansfordssite",
+            "type": "String"
+        },
+        "sites_DHAzureToolkit_name": {
+            "defaultValue": "DHAzureToolkit",
+            "type": "String"
+        },
+        "sites_WingtipB2CDemos_name": {
+            "defaultValue": "WingtipB2CDemos",
+            "type": "String"
+        },
+        "serverfarms_sandboxasp01_name": {
+            "defaultValue": "sandboxasp01",
+            "type": "String"
+        },
+        "components_dhb2cdemo_name": {
+            "defaultValue": "dhb2cdemo",
+            "type": "String"
+        },
+        "config_web_name": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "config_web_name_1": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "components_msfsusb2cdemo_name": {
+            "defaultValue": "msfsusb2cdemo",
+            "type": "String"
+        },
+        "components_hansfordssite_name": {
+            "defaultValue": "hansfordssite",
+            "type": "String"
+        },
+        "serverfarms_WingTipBillingPlan_name": {
+            "defaultValue": "WingTipBillingPlan",
+            "type": "String"
+        },
+        "config_web_name_2": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "config_web_name_3": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "components_hansford_toolkit_name": {
+            "defaultValue": "hansford-toolkit",
+            "type": "String"
+        },
+        "config_web_name_4": {
+            "defaultValue": "web",
+            "type": "String"
+        },
+        "accounts_fsussearch_name": {
+            "defaultValue": "fsussearch",
+            "type": "String"
+        },
+        "accounts_ImageDetection_name": {
+            "defaultValue": "ImageDetection",
+            "type": "String"
+        },
+        "hostNameBindings_dhb2cdemo.azurewebsites.net_name": {
+            "defaultValue": "dhb2cdemo.azurewebsites.net",
+            "type": "String"
+        },
+        "hostNameBindings_fordinner.azurewebsites.net_name": {
+            "defaultValue": "fordinner.azurewebsites.net",
+            "type": "String"
+        },
+        "deployments_9ee22fdf69ae128a2893ed317807cbf49eb124ac_name": {
+            "defaultValue": "9ee22fdf69ae128a2893ed317807cbf49eb124ac",
+            "type": "String"
+        },
+        "deployments_480034ddbc2298e4da3be5ec252a5e319aa3c6c7_name": {
+            "defaultValue": "480034ddbc2298e4da3be5ec252a5e319aa3c6c7",
+            "type": "String"
+        },
+        "hostNameBindings_hansfordssite.azurewebsites.net_name": {
+            "defaultValue": "hansfordssite.azurewebsites.net",
+            "type": "String"
+        },
+        "hostNameBindings_dhazuretoolkit.azurewebsites.net_name": {
+            "defaultValue": "dhazuretoolkit.azurewebsites.net",
+            "type": "String"
+        },
+        "hostNameBindings_wingtipb2cdemos.azurewebsites.net_name": {
+            "defaultValue": "wingtipb2cdemos.azurewebsites.net",
+            "type": "String"
+        },
+        "deployments_b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2_name": {
+            "defaultValue": "b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2",
+            "type": "String"
+        },
+        "deployments_9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3_name": {
+            "defaultValue": "9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3",
+            "type": "String"
+        },
+        "deployments_9a0aa48390fb1063b87ffe4babe52a08f08e41ce_name": {
+            "defaultValue": "9a0aa48390fb1063b87ffe4babe52a08f08e41ce",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.CognitiveServices/accounts/fsussearch'.",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "sku": {
+                "name": "S1"
+            },
+            "kind": "Bing.Search.v7",
+            "name": "[parameters('accounts_fsussearch_name')]",
+            "apiVersion": "2016-02-01-preview",
+            "location": "global",
+            "scale": null,
+            "properties": {},
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.CognitiveServices/accounts/ImageDetection'.",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "sku": {
+                "name": "F0"
+            },
+            "kind": "ComputerVision",
+            "name": "[parameters('accounts_ImageDetection_name')]",
+            "apiVersion": "2016-02-01-preview",
+            "location": "southcentralus",
+            "scale": null,
+            "properties": {},
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/microsoft.insights/components/msfsusb2cdemo'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_msfsusb2cdemo_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "eastus",
+            "tags": {
+                "hidden-link:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/msfsusb2cdemo": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/microsoft.insights/components/hansfordssite'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_hansfordssite_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "southcentralus",
+            "tags": {
+                "hidden-link:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansfordssite": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/microsoft.insights/components/hansford-toolkit'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_hansford_toolkit_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "southcentralus",
+            "tags": {
+                "hidden-link:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansford-toolkit": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/microsoft.insights/components/dhb2cdemo'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_dhb2cdemo_name')]",
+            "apiVersion": "2015-05-01",
+            "location": "southcentralus",
+            "tags": {
+                "hidden-link:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/dhb2cdemo": "Resource"
+            },
+            "scale": null,
+            "properties": {
+                "Application_Type": "web",
+                "Flow_Type": null,
+                "Request_Source": "IbizaWebAppExtensionCreate",
+                "HockeyAppId": null,
+                "SamplingPercentage": null
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1",
+                "tier": "Free",
+                "size": "F1",
+                "family": "F",
+                "capacity": 0
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_sandboxasp01_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_sandboxasp01_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/WingTipBillingPlan'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_WingTipBillingPlan_name')]",
+            "apiVersion": "2016-09-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "name": "[parameters('serverfarms_WingTipBillingPlan_name')]",
+                "workerTierName": null,
+                "adminSiteName": null,
+                "hostingEnvironmentProfile": null,
+                "perSiteScaling": false,
+                "reserved": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/dhb2cdemo'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_dhb2cdemo_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/WingTipBillingPlan": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_dhb2cdemo_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_dhb2cdemo_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_WingTipBillingPlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null,
+                "httpsOnly": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_WingTipBillingPlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/DHAzureToolkit'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_DHAzureToolkit_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_DHAzureToolkit_name'),'dhazuretoolkit.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_DHAzureToolkit_name'),'dhazuretoolkit.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null,
+                "httpsOnly": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/ForDinner'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_ForDinner_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "identity": {
+                "principalId": "97f5e78a-6ad4-45c9-8ef0-5bc0e860218c",
+                "tenantId": "b4acdf7d-f30c-4599-acfc-79d4b0d52285",
+                "type": "SystemAssigned"
+            },
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_ForDinner_name'),'fordinner.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_ForDinner_name'),'fordinner.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null,
+                "httpsOnly": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/WingtipB2CDemos'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_WingtipB2CDemos_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_WingtipB2CDemos_name'),'wingtipb2cdemos.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_WingtipB2CDemos_name'),'wingtipb2cdemos.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_WingTipBillingPlan_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null,
+                "httpsOnly": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_WingTipBillingPlan_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansfordssite'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_hansfordssite_name')]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_hansfordssite_name'),'.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_hansfordssite_name'),'.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "virtualIP": null,
+                        "thumbprint": null,
+                        "toUpdate": null,
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]",
+                "reserved": false,
+                "siteConfig": null,
+                "scmSiteAlsoStopped": false,
+                "hostingEnvironmentProfile": null,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "cloningInfo": null,
+                "httpsOnly": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_sandboxasp01_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/dhb2cdemo/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_dhb2cdemo_name'), '/', parameters('config_web_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/WingTipBillingPlan": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$dhb2cdemo",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "None",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "clientSecretCertificateThumbprint": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "scmIpSecurityRestrictions": null,
+                "scmIpSecurityRestrictionsUseMain": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.0",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_dhb2cdemo_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/dhb2cdemo/hostNameBindings/dhb2cdemo.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_dhb2cdemo_name'), '/', parameters('hostNameBindings_dhb2cdemo.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "siteName": "dhb2cdemo",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_dhb2cdemo_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/DHAzureToolkit/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_DHAzureToolkit_name'), '/', parameters('config_web_name_3'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$DHAzureToolkit",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "None",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": {
+                    "triggers": null,
+                    "actions": null
+                },
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": true,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": "65968337-ba9f-44c7-95a9-70ff7d0a93a0",
+                    "clientSecret": null,
+                    "clientSecretCertificateThumbprint": null,
+                    "issuer": "https://login.microsoftonline.com/msusfsb2c.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_SignUpPolicy",
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "scmIpSecurityRestrictions": null,
+                "scmIpSecurityRestrictionsUseMain": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.0",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DHAzureToolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/sites/DHAzureToolkit/deployments/9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_DHAzureToolkit_name'), '/', parameters('deployments_9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_9b5fff5ac1fb60fbcf7eb46d4a6fdef1143e48c3_name')]",
+                "status": 3,
+                "author_email": "davhans@microsoft.com",
+                "author": "david",
+                "deployer": "davhans",
+                "message": "new code\n",
+                "start_time": "2017-10-24T00:52:53.929498Z",
+                "end_time": "2017-10-24T01:06:04.9553157Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DHAzureToolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/DHAzureToolkit/hostNameBindings/dhazuretoolkit.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_DHAzureToolkit_name'), '/', parameters('hostNameBindings_dhazuretoolkit.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "siteName": "DHAzureToolkit",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DHAzureToolkit_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/ForDinner/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_ForDinner_name'), '/', parameters('config_web_name_1'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "index.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$ForDinner",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "GitHub",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": null,
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": "a0bbe944-5137-4cca-8020-6b0ca4dc2435",
+                    "clientSecret": null,
+                    "clientSecretCertificateThumbprint": null,
+                    "issuer": "https://msusfsb2c.b2clogin.com/msusfsb2c.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_SignUpPolicy",
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": 172,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "scmIpSecurityRestrictions": null,
+                "scmIpSecurityRestrictionsUseMain": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_ForDinner_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/sites/ForDinner/deployments/9ee22fdf69ae128a2893ed317807cbf49eb124ac'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_ForDinner_name'), '/', parameters('deployments_9ee22fdf69ae128a2893ed317807cbf49eb124ac_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_9ee22fdf69ae128a2893ed317807cbf49eb124ac_name')]",
+                "status": 4,
+                "author_email": "davhans@microsoft.com",
+                "author": "david",
+                "deployer": "GitHub",
+                "message": "vegan\n",
+                "start_time": "2018-08-24T14:56:31.7762663Z",
+                "end_time": "2018-08-24T14:56:33.9961984Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_ForDinner_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/sites/ForDinner/deployments/480034ddbc2298e4da3be5ec252a5e319aa3c6c7'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_ForDinner_name'), '/', parameters('deployments_480034ddbc2298e4da3be5ec252a5e319aa3c6c7_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_480034ddbc2298e4da3be5ec252a5e319aa3c6c7_name')]",
+                "status": 4,
+                "author_email": "davhans@microsoft.com",
+                "author": "david",
+                "deployer": "GitHub",
+                "message": "initialupload\n",
+                "start_time": "2018-08-22T19:05:20.6132161Z",
+                "end_time": "2018-08-22T19:05:24.2227Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_ForDinner_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/ForDinner/hostNameBindings/fordinner.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_ForDinner_name'), '/', parameters('hostNameBindings_fordinner.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "siteName": "ForDinner",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_ForDinner_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/WingtipB2CDemos/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_WingtipB2CDemos_name'), '/', parameters('config_web_name_4'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$WingtipB2CDemos",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "VSO",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": {
+                    "triggers": null,
+                    "actions": null
+                },
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "clientSecretCertificateThumbprint": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "scmIpSecurityRestrictions": null,
+                "scmIpSecurityRestrictionsUseMain": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.0",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_WingtipB2CDemos_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/sites/WingtipB2CDemos/deployments/9a0aa48390fb1063b87ffe4babe52a08f08e41ce'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_WingtipB2CDemos_name'), '/', parameters('deployments_9a0aa48390fb1063b87ffe4babe52a08f08e41ce_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_9a0aa48390fb1063b87ffe4babe52a08f08e41ce_name')]",
+                "status": 3,
+                "author_email": "davhans@microsoft.com",
+                "author": "david",
+                "deployer": "VSTS",
+                "message": "Add project files.\n",
+                "start_time": "2019-02-11T18:31:11.1860563Z",
+                "end_time": "2019-02-11T18:33:12.5866859Z",
+                "active": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_WingtipB2CDemos_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/WingtipB2CDemos/hostNameBindings/wingtipb2cdemos.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_WingtipB2CDemos_name'), '/', parameters('hostNameBindings_wingtipb2cdemos.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "siteName": "WingtipB2CDemos",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_WingtipB2CDemos_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansfordssite/config/web'.",
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('sites_hansfordssite_name'), '/', parameters('config_web_name_2'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/serverfarms/sandboxasp01": "empty",
+                "resourceType": "Website",
+                "Owner": "DavidH"
+            },
+            "scale": null,
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html",
+                    "jonarbuckle.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "pythonVersion": "",
+                "nodeVersion": "",
+                "linuxFxVersion": "",
+                "windowsFxVersion": null,
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": null,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$hansfordssite",
+                "publishingPassword": null,
+                "appSettings": null,
+                "azureStorageAccounts": {},
+                "metadata": null,
+                "connectionStrings": null,
+                "machineKey": null,
+                "handlerMappings": null,
+                "documentRoot": null,
+                "scmType": "GitHub",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "javaVersion": null,
+                "javaContainer": null,
+                "javaContainerVersion": null,
+                "appCommandLine": "",
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    },
+                    {
+                        "virtualPath": "/week1",
+                        "physicalPath": "site\\wwwroot\\week1",
+                        "preloadEnabled": false,
+                        "virtualDirectories": null
+                    }
+                ],
+                "winAuthAdminState": 0,
+                "winAuthTenantState": 0,
+                "customAppPoolIdentityAdminState": false,
+                "customAppPoolIdentityTenantState": false,
+                "runtimeADUser": null,
+                "runtimeADUserPassword": null,
+                "loadBalancing": "LeastRequests",
+                "routingRules": [],
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "limits": null,
+                "autoHealEnabled": false,
+                "autoHealRules": {
+                    "triggers": null,
+                    "actions": null
+                },
+                "tracingOptions": null,
+                "vnetName": "",
+                "siteAuthEnabled": false,
+                "siteAuthSettings": {
+                    "enabled": null,
+                    "unauthenticatedClientAction": null,
+                    "tokenStoreEnabled": null,
+                    "allowedExternalRedirectUrls": null,
+                    "defaultProvider": null,
+                    "clientId": null,
+                    "clientSecret": null,
+                    "clientSecretCertificateThumbprint": null,
+                    "issuer": null,
+                    "allowedAudiences": null,
+                    "additionalLoginParams": null,
+                    "isAadAutoProvisioned": false,
+                    "googleClientId": null,
+                    "googleClientSecret": null,
+                    "googleOAuthScopes": null,
+                    "facebookAppId": null,
+                    "facebookAppSecret": null,
+                    "facebookOAuthScopes": null,
+                    "twitterConsumerKey": null,
+                    "twitterConsumerSecret": null,
+                    "microsoftAccountClientId": null,
+                    "microsoftAccountClientSecret": null,
+                    "microsoftAccountOAuthScopes": null
+                },
+                "cors": null,
+                "push": null,
+                "apiDefinition": null,
+                "autoSwapSlotName": null,
+                "localMySqlEnabled": false,
+                "managedServiceIdentityId": null,
+                "xManagedServiceIdentityId": null,
+                "ipSecurityRestrictions": null,
+                "scmIpSecurityRestrictions": null,
+                "scmIpSecurityRestrictionsUseMain": null,
+                "http20Enabled": false,
+                "minTlsVersion": "1.0",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_hansfordssite_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourcegroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansfordssite/deployments/b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2'.",
+            "type": "Microsoft.Web/sites/deployments",
+            "name": "[concat(parameters('sites_hansfordssite_name'), '/', parameters('deployments_b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "id": "[parameters('deployments_b2c2c9ecbb1a57f80ee52b1c5f841f53e3eaeac2_name')]",
+                "status": 4,
+                "author_email": "davhans@microsoft.com",
+                "author": "david",
+                "deployer": "GitHub",
+                "message": "Let's Try Again\n",
+                "start_time": "2019-02-14T22:41:19.2471832Z",
+                "end_time": "2019-02-14T22:41:23.1536102Z",
+                "active": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_hansfordssite_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordssite_rg/providers/Microsoft.Web/sites/hansfordssite/hostNameBindings/hansfordssite.azurewebsites.net'.",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "name": "[concat(parameters('sites_hansfordssite_name'), '/', parameters('hostNameBindings_hansfordssite.azurewebsites.net_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "South Central US",
+            "scale": null,
+            "properties": {
+                "siteName": "hansfordssite",
+                "domainId": null,
+                "hostNameType": "Verified"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_hansfordssite_name'))]"
+            ]
+        }
+    ]
+}
